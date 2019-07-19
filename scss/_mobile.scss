@@ -1,0 +1,68 @@
+//Widescreens
+@include mediaXL {}
+
+//Desctops & Laptops
+@include mediaLg {
+    .results {
+        &-item {
+            width: 100%;
+        }
+    }
+}
+
+//Tablets & Small Laptops
+@include mediaMd {
+    .header {
+        height: 100%;
+
+        &-left {
+            width: 100%;
+            padding: 1.5rem 0;
+        }
+
+        &-right {
+            width: 100%;
+            justify-content: flex-end;
+            border-top: 1px solid $active-text-color
+        }
+
+        .navbar-mobile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: auto;
+        }
+    }
+
+    #slidebar-left {
+        position: absolute;
+        left: -250px;
+        z-index: 900;
+    }
+
+    .results {
+        &-item {
+            width: 50%;
+        }
+    }
+}
+
+// Smartphones
+@include mediaSm {
+    .results {
+        &-item {
+            width: 100%;
+        }
+    }
+
+    .search-field{
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+
+    .modal-window {
+        &>div {
+            width: 90%;
+        }
+    }
+}

@@ -1,0 +1,210 @@
+/***************CONTENT PAGE****************/
+
+#page-content {
+    width: 100%;
+    height: calc(100vh - 62px);
+    background-color: $secondary-grey-color;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.header-content {
+    padding: 12px 20px;
+    border-bottom: 1px solid #ddd;
+    background: #fbfbfb;
+
+    h2 {
+        color: #1d2939;
+        font-size: 2.5rem;
+
+        i {
+            margin-right: 0.7rem;
+            padding-right: 1rem;
+            border-right: 1px dotted #dddddd;
+        }
+
+        span {
+            font-size: 1.3rem;
+            text-transform: capitalize;
+            color: $light-text-color;
+            font-style: italic;
+            vertical-align: middle;
+            margin-left: 5px;
+            font-weight: normal;
+        }
+    }
+
+}
+
+/************FAQ**************/
+
+.search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+
+    &-field {
+        width: 50%;
+        padding: 1.5rem 2rem;
+        border-radius: 50px;
+        border: 4px solid #ddd;
+        outline: none;
+    }
+
+    &-btn {
+        width: 100px;
+        text-transform: uppercase;
+        border-radius: 50px;
+        border: 4px solid #E9EAED;
+        text-align: center;
+        line-height: 2.8rem;
+        transition: all .4s;
+        padding: 1rem;
+        margin-left: 5%;
+        position: relative;
+        background: -webkit-linear-gradient(top left,
+                rgba(255, 255, 255, 0.2) 0%,
+                rgba(255, 255, 255, 0.2) 37%,
+                rgba(255, 255, 255, 0.8) 45%,
+                rgba(255, 255, 255, 0.0) 50%),
+            linear-gradient($primary-red-color,darken($primary-red-color,20));
+        background-position: -130px -190px, 0 0;
+        background-size: 250% 250%, 100% 100%;
+        background-size: 250% 250%, 100% 100%;
+        transition: background-position 0s ease;
+
+        span {
+            color: #ddd;
+            vertical-align: middle;
+        }
+
+
+
+        &:hover {
+            color: #fff;
+            background-position: 0 0, 0 0;
+            transition-duration: .3s;
+        }
+    }
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 2rem 2rem;
+
+    &-item {
+        width: 33.33%;
+        display: flex;
+        flex-direction: column;
+        color: #d0d0d0;
+        line-height: 1.5;
+        padding: 2% 4%;
+        position: relative;
+
+        &>a.share {
+            display: inline-block;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            border: 1px solid $active-text-color;
+            border-radius: 50%;
+            padding: 1px 5px;
+            background-color: $primary-red-color;
+            color: #d0d0d0;
+        }
+
+        h3 {
+            padding-right: 2rem;
+            margin-bottom: 2rem;
+
+            a {
+                color: #d0d0d0;
+            }
+        }
+
+        p {
+            @extend .full-view;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .read-btn {
+            margin-left: auto;
+
+            &:hover {
+                color: $primary-red-color;
+            }
+        }
+
+        &:nth-child(3n+3),
+        &:nth-child(4n+7) {
+            background-color: #333639;
+        }
+
+        &:nth-child(even) {
+            background-color: lighten(#333639, 10);
+        }
+
+        &:nth-child(4n-7) {
+            background-color: #1F1F1F;
+        }
+
+        &:nth-child(4n+4) {
+            background-color: #45484C;
+        }
+
+    }
+}
+
+/***********MODAL WINDOW**************/
+.modal-window {
+    position: fixed;
+    background-color: rgba(200, 200, 200, 0.75);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+
+    &:target {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &>div {
+        width: 40rem;
+        position: relative;
+        margin: 10% auto;
+        padding: 2rem;
+        background: #fff;
+        color: #444;
+    }
+
+    h3 {
+        font-size: 150%;
+        margin: 1.5rem 0;
+    }
+}
+
+.modal-close {
+    width: 7rem;
+    font-size: 1.2rem;
+    color: #aaa;
+    line-height: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

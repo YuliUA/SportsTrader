@@ -1,0 +1,77 @@
+/**************HEADER***************/
+
+.header {
+    height: 6.2rem;
+    background-color: $primary-grey-color;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-left {
+        width: 250px;
+
+        &__navbar {
+            @extend .full-view;
+        }
+    }
+
+    &-right {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+        .navbar-mobile {
+            display: none;
+            width: 59px;
+            height: 100%;
+            background-color: $primary-red-color;
+            color: $active-text-color;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.main-logo {
+    @extend .full-view;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    padding: 0 1rem 0 0;
+
+    .logo {
+        margin: 0 .7rem 0 0;
+    }
+
+    .text {
+        color: $primary-red-color;
+        font-weight: 400;
+
+        &:hover {
+            text-decoration: underline;
+            color: darken($primary-red-color, 7)
+        }
+    }
+}
+
+.sign-in {
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        color: $secondary-text-color;
+        line-height: 2rem;
+        padding: 1.2rem 2rem .8rem;
+
+        &>i {
+            font-size: 2rem
+        }
+    }
+}
+
+.sign-up {
+    @extend .sign-in
+}

@@ -1,0 +1,128 @@
+#slidebar-left {
+    width: 250px;
+    background-color: $primary-grey-color;
+
+    .scroll-wrap {
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 62px);
+    }
+}
+
+.slidebar-menu {
+    li {
+        padding: .6rem 1.5rem;
+
+        &:first-child {
+            a {
+                &::after {
+                    top: -2px;
+                }
+            }
+        }
+
+        a {
+            position: relative;
+
+            &::after {
+                content: '';
+                border: 1px solid $primary-text-color;
+                position: absolute;
+                display: block;
+                height: 2rem;
+                top: -20px;
+                left: 14px;
+            }
+
+            .icon {
+                position: relative;
+                z-index: 9;
+                display: inline-block;
+                border-radius: 50%;
+                border: 2px solid #373737;
+                background-color: #222;
+                margin-right: 1rem;
+
+
+                i {
+                    text-align: center;
+                    line-height: 2.5rem;
+                    width: 2.5rem;
+                    font-size: 1.2rem;
+                    color: $dark-text-color;
+                }
+            }
+
+            span {
+                display: inline;
+                color: $dark-text-color;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            a {
+                span {
+                    color: $active-text-color;
+                }
+
+                i {
+                    color: $active-text-color;
+                }
+            }
+        }
+    }
+
+    .active {
+        background-color: #3c3c3c;
+
+        .active {
+            .icon {
+                background-color: $primary-red-color;
+                border-color: $primary-grey-color;
+
+                i {
+                    color: $active-text-color;
+                }
+            }
+
+            span {
+                color: $active-text-color
+            }
+        }
+    }
+
+}
+
+/***************FOOTER*************/
+
+.footer {
+    margin-top: auto;
+    padding: 5rem 1rem 1.5rem;
+    line-height: 2.1rem;
+
+    .links {
+        display: flex;
+        font-size: 12px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        a {
+            color: $light-text-color;
+
+            &:hover {
+                color: $active-text-color;
+            }
+        }
+    }
+
+    .copyright {
+        div {
+            a {
+                color: $light-text-color
+            }
+        }
+    }
+}
