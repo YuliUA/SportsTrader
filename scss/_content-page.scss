@@ -44,6 +44,7 @@
     justify-content: center;
     flex-wrap: wrap;
     padding: 2rem 0;
+    backface-visibility: hidden;
 
     &-field {
         width: 50%;
@@ -51,6 +52,7 @@
         border-radius: 50px;
         border: 4px solid #ddd;
         outline: none;
+        animation: moveInLeft 1s ease-in-out;
     }
 
     &-btn {
@@ -74,6 +76,7 @@
         background-size: 250% 250%, 100% 100%;
         background-size: 250% 250%, 100% 100%;
         transition: background-position 0s ease;
+        animation: moveInRight 1s ease-in-out;
 
         span {
             color: #ddd;
@@ -103,6 +106,7 @@
         line-height: 1.5;
         padding: 2% 4%;
         position: relative;
+        box-shadow: inset -5px -5px 5px  #fff;
 
         &>a.share {
             display: inline-block;
